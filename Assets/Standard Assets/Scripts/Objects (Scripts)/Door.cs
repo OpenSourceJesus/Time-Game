@@ -15,16 +15,17 @@ public class Door : PhysicsObject
 		otherPos.SetParent(null);
 	}
 
-	void Update ()
+	public override void Update ()
 	{
 		if (GameManager.timeSpeed == 0)
 			return;
-		else
+		else if (GameManager.timeSpeed > 0)
 		{
 			if (isWeightpadPressed)
 				rb.position = Vector2.Lerp(rb.position, otherPos.position, speed * Time.deltaTime * (1f / Vector2.Distance(rb.position, otherPos.position)));
 			else
 				rb.position = Vector2.Lerp(rb.position, initPos, speed * Time.deltaTime * (1f / Vector2.Distance(rb.position, initPos)));
 		}
+		base.Update ();
 	}
 }

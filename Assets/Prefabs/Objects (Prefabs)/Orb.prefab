@@ -303,4 +303,5 @@ MonoBehaviour:
   trs: {fileID: 2854310406794125974}
   rb: {fileID: 6181684573619042919}
   col: {fileID: 4163385596102401880}
+  isPushable: 1
   timeSpeedChange: 0
